@@ -10,7 +10,14 @@ import (
 func main() {
 	day, _ := strconv.Atoi(os.Args[1])
 
-	inputPath := fmt.Sprintf("../inputs/day%02d.txt", day)
+	test := len(os.Args) > 2 && os.Args[2] == "--test"
+
+	suffix := ""
+	if test {
+		suffix = "_test"
+	}
+
+	inputPath := fmt.Sprintf("../inputs/day%02d%s.txt", day, suffix)
 	inputBytes, err := os.ReadFile(inputPath)
 
 	if err != nil {
