@@ -31,6 +31,7 @@ git clone https://github.com/prethith/advent-of-code.git
 4. Language-specific instructions:
     - Go:
         From the top `go/` folder, run:
+
         ```bash
         go run main.go 1 # or any other day like 2,3,4,.....
         go run main.go 1 --test # to use the test input
