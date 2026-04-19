@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"time"
 )
 
 func main() {
@@ -34,17 +35,23 @@ func main() {
 	}
 
 	fmt.Printf("**=========================Day %d=========================**\n", day)
+	start := time.Now()
 	part1, err := solution.Part1(input)
+	elapsed := time.Since(start)
 	if err != nil {
 	    fmt.Printf("  Part 1 error: %s\n", err)
 	} else {
 	    fmt.Printf("  Part 1: %s\n", part1)
+		fmt.Printf("  Time taken: %v\n", elapsed)
 	}
 
+	start = time.Now()
 	part2, err := solution.Part2(input)
+	elapsed = time.Since(start)
 	if err != nil {
 	    fmt.Printf("  Part 2 error: %s\n", err)
 	} else {
-	    fmt.Printf("  Part 2: %s\n", part2)
+	    fmt.Printf("\n  Part 2: %s\n", part2)
+		fmt.Printf("  Time taken: %v\n", elapsed)
 	}
 }
