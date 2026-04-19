@@ -8,6 +8,7 @@ func GetSolution(day int) solution.Solution {
 		case 2: return Day02{}
 		case 3: return Day03{}
 		case 4: return Day04{}
+		case 5: return Day05{}
 		default: return nil
 	}
 }
