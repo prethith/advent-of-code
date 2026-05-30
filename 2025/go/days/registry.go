@@ -1,14 +1,20 @@
 package days
 
-import "advent_of_code/solution"
+type Solution struct {
+	Part1 func(string) (string, error)
+	Part2 func(string) (string, error)
+}
 
-func GetSolution(day int) solution.Solution {
-	switch day {
-		case 1: return Day01{}
-		case 2: return Day02{}
-		case 3: return Day03{}
-		case 4: return Day04{}
-		case 5: return Day05{}
-		default: return nil
-	}
+var solutions = map[int]Solution{
+	1: {day01Part1, day01Part2},
+	2: {day02Part1, day02Part2},
+	3: {day03Part1, day03Part2},
+	4: {day04Part1, day04Part2},
+	5: {day05Part1, day05Part2},
+	6: {day06Part1, day06Part2},
+}
+
+func Get(day int) (Solution, bool) {
+	s, ok := solutions[day]
+	return s, ok
 }

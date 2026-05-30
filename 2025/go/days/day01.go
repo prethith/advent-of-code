@@ -6,9 +6,7 @@ import (
 	"strings"
 )
 
-type Day01 struct{}
-
-func (d Day01) Part1(input string) (string, error) {
+func day01Part1(input string) (string, error) {
 	lines := strings.Split(strings.TrimSpace(input), "\n")
 	var count = 0
 	var dial = 50
@@ -32,7 +30,8 @@ func (d Day01) Part1(input string) (string, error) {
 
 	return strconv.Itoa(count), nil
 }
-func (d Day01) Part2(input string) (string, error) {
+
+func day01Part2(input string) (string, error) {
 	lines := strings.Split(strings.TrimSpace(input), "\n")
 	count := 0
 	dial := 50
