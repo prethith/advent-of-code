@@ -12,6 +12,7 @@ var solutions = map[int]Solution{
 	4: {day04Part1, day04Part2},
 	5: {day05Part1, day05Part2},
 	6: {day06Part1, day06Part2},
+	7: {day07Part1, day07Part2},
 }
 
 func Get(day int) (Solution, bool) {
